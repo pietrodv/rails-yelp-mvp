@@ -1,0 +1,17 @@
+<h1>Add review for <%= @restaurant.name %></h1>
+
+<!-- POST /restaurants/4/reviews -->
+<%= simple_form_for [@restaurant, @review] do |f| %>
+  <%= f.error_notification %>
+  <div class="form-inputs">
+    <%= f.input :content %>
+  </div>
+
+  <div class="form-inputs">
+    <%= f.input :rating %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
